@@ -22,7 +22,11 @@ jar {
     manifest {
         attributes(
                 'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-                'Main-Class': 'com.cognizant.Application'
+                'Main-Class': 'com.cognizant.Application',
+        )
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'com.cognizant.NameEmailFormatter',
         )
     }
 }
